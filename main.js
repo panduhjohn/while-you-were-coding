@@ -121,11 +121,13 @@ console.log('Challenge #8');
 //  individually, but backwards. That is, the first console log should be
 // `.`, followed by `s`, followed by `d`, and so on.
 
-let deathstring = 'I am become death, destroyer of worlds.';
+const death = 'I am become death, destroyer of worlds.';
+let counter = death.length;
 
-const reverseString = (str) => {
-    return str.split('').reverse().join('');
-};
+while (counter >= 0) {
+    console.log(death[counter]);
+    counter = counter - 1;
+}
 
 reverseString('I am become death, destroyer of worlds.');
 
