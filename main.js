@@ -4,6 +4,13 @@ console.log('Challenge #1');
 
 // Use `if` and a modulus operation.
 
+const number = 20;
+let counter = 0;
+
+while (counter <= number) {
+    console.log(counter)
+    counter = counter + 1;
+} 
 
 console.log('Challenge #2');
 
@@ -22,11 +29,20 @@ console.log('Challenge #3');
 
 // (No extra credit will be given for wearing heels during this challenge.)
 
+const number = 20;
+let counter = number;
+
+while (counter > 0) {
+    console.log(counter)
+    counter = counter - 1;
+} 
 
 console.log('Challenge #4');
 
 // For the string 'Boy howdy am I good at this!', console out the letters
 // individually.
+
+const howdy = 'Boy howdy am I good at this!'
 
 
 console.log('Challenge #5');
@@ -34,6 +50,9 @@ console.log('Challenge #5');
 // For the string, 'And getting better every day.', starting with the second
 // character, print out every third character.
 
+let ... = 'And getting better every day.';
+
+console.log
 
 console.log('Challenge #6');
 
@@ -41,11 +60,16 @@ console.log('Challenge #6');
 // UPPERCASED.
 
 
+let beststr = 'Am I the best?';
+beststr.toUpperCase();
+
 console.log('Challenge #7');
 
 // For the string 'Whoa, I am the best!', console out the letters individually,
 // but also capitalize the letters in the third word.
 
+let whoastring = 'Whoa, I am the best!'
+whoastring = whoastring.replace("am", "am".toUpperCase())
 
 console.log('Challenge #8');
 
@@ -54,6 +78,13 @@ console.log('Challenge #8');
 //  individually, but backwards. That is, the first console log should be
 // `.`, followed by `s`, followed by `d`, and so on.
 
+let deathstring = 'I am become death, destroyer of worlds.';
+
+const reverseString = (str) => {
+    return str.split('').reverse().join('');
+};
+
+reverseString('I am become death, destroyer of worlds.');
 
 console.log('Challenge #9');
 
