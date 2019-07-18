@@ -80,9 +80,16 @@ console.log('Challenge #6');
 // For the string 'Am I the best?', console out the letters individually, AND
 // UPPERCASED.
 
+let best = 'Am I the best?';
+let counter = 0;
 
-let beststr = 'Am I the best?';
-beststr.toUpperCase();
+while (counter < best.length) {
+
+    console.log(best[counter].toUpperCase());
+    counter = counter + 1;
+
+}
+
 
 console.log('Challenge #7');
 
