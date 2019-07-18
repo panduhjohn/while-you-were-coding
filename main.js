@@ -96,8 +96,23 @@ console.log('Challenge #7');
 // For the string 'Whoa, I am the best!', console out the letters individually,
 // but also capitalize the letters in the third word.
 
-let whoastring = 'Whoa, I am the best!'
-whoastring = whoastring.replace("am", "am".toUpperCase())
+const better = "Woah, I am the best!";
+let counter = 0;
+let space = 0;
+
+while (counter < better.length) {
+
+    if (better[counter] === " ") {
+        space = space + 1;
+    }
+    if (space === 2) {
+        console.log(better[counter].toUpperCase());
+    }
+    else {
+        console.log(better[counter]);
+    }
+    counter = counter + 1;
+}
 
 console.log('Challenge #8');
 
