@@ -5,12 +5,16 @@ console.log('Challenge #1');
 // Use `if` and a modulus operation.
 
 const number = 20;
-let counter = 0;
+let counter = 1;
 
 while (counter <= number) {
-    console.log(counter)
+    if (counter % 3 === 0) {
+        console.log(counter)
+    }
     counter = counter + 1;
 } 
+
+console.log(challenge1)
 
 console.log('Challenge #2');
 
@@ -37,13 +41,25 @@ while (counter > 0) {
     counter = counter - 1;
 } 
 
+console.log(challenge3)
+
 console.log('Challenge #4');
 
 // For the string 'Boy howdy am I good at this!', console out the letters
 // individually.
 
-const howdy = 'Boy howdy am I good at this!'
+const howdy = 'Boy howdy am I good at this!';
 
+let counter = 0;
+
+while (counter < howdy.length) {
+
+    console.log(howdy[counter]);
+    counter = counter + 1;
+
+}
+
+console.log(challenge4)
 
 console.log('Challenge #5');
 
