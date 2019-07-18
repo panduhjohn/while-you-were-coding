@@ -87,7 +87,6 @@ while (counter < best.length) {
 
     console.log(best[counter].toUpperCase());
     counter = counter + 1;
-
 }
 
 
@@ -104,11 +103,9 @@ while (counter < better.length) {
 
     if (better[counter] === " ") {
         space = space + 1;
-    }
-    if (space === 2) {
+    } if (space === 2) {
         console.log(better[counter].toUpperCase());
-    }
-    else {
+    } else {
         console.log(better[counter]);
     }
     counter = counter + 1;
@@ -129,10 +126,6 @@ while (counter >= 0) {
     counter = counter - 1;
 }
 
-reverseString('I am become death, destroyer of worlds.');
-
-console.log('Challenge #9');
-
 const names = 'Colin|Mesuara|Drew|In Seop|Emma|Ben|J|Ryan|Olgy|Mike|Chris|John';
 
 // Console out the individual letters of each person in class today, which are
@@ -143,3 +136,20 @@ const names = 'Colin|Mesuara|Drew|In Seop|Emma|Ben|J|Ryan|Olgy|Mike|Chris|John';
 
 // Don't print the pipes!
 
+const names = 'Colin|Mesuara|Drew|In Seop|Emma|Ben|J|Ryan|Olgy|Mike|Chris|John';
+const str = 'Here today is:';
+let counter = 0;
+let hereToday = 'Here today is:';
+let replace = hereToday.replace("|", " ")
+
+while (counter < names.length) {
+    if (counter === 0) {
+        console.log(hereToday)
+    }
+    if (names[counter] === "|") {
+        console.log(hereToday)
+    } else {
+        console.log(names[counter])
+    }
+    counter = counter + 1;
+}
