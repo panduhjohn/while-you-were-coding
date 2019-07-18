@@ -66,9 +66,14 @@ console.log('Challenge #5');
 // For the string, 'And getting better every day.', starting with the second
 // character, print out every third character.
 
-let ... = 'And getting better every day.';
+let getting = 'And getting better every day.';
+let counter = 1;
 
-console.log
+while (counter < getting.length) {
+    console.log(getting[counter]);
+    counter = counter + 3;
+}
+
 
 console.log('Challenge #6');
 
