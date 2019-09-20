@@ -1,48 +1,40 @@
+// While I Should Have Been Coding...
+
 console.log('Challenge #1');
 
 // Console out the numbers from 1-20, but only if they're divisible by 3.
-
 // Use `if` and a modulus operation.
 
-const number = 20;
-let counter = 1;
-
-while (counter <= number) {
-    if (counter % 3 === 0) {
-        console.log(counter)
+for(let i = 1; i <= 20; i++) {
+    if (i % 3 === 0) {
+        console.log(i);
     }
-    counter = counter + 1;
-} 
+}
 
-console.log(challenge1)
-
+console.log('---')
 console.log('Challenge #2');
 
 // Same problem as #1, but no `if`s, `mods`, or `but`s (and no, that last one is
 // not a thing). If you did it right, you should run the loop 6 times with 1
 // console log per loop. That's called... a clue!
 
+for(let i = 3; i <= 20; i+= 3) {
+    console.log(i);
+}
 
+console.log('---')
 console.log('Challenge #3');
 
 // Console out the numbers from 1-20. BACKWARDS.
-
 // (And, optionally, in heels.)
-
 // (That's a reference that only Olds make, and only if they're SUPER CULTURED.)
-
 // (No extra credit will be given for wearing heels during this challenge.)
 
-const number = 20;
-let counter = number;
+for(let i = 20; i >= 1; i--) {
+    console.log(i);
+}
 
-while (counter > 0) {
-    console.log(counter)
-    counter = counter - 1;
-} 
-
-console.log(challenge3)
-
+console.log('---')
 console.log('Challenge #4');
 
 // For the string 'Boy howdy am I good at this!', console out the letters
@@ -50,106 +42,113 @@ console.log('Challenge #4');
 
 const howdy = 'Boy howdy am I good at this!';
 
-let counter = 0;
-
-while (counter < howdy.length) {
-
-    console.log(howdy[counter]);
-    counter = counter + 1;
-
+for(let i = 0; i < howdy.length; i++) {
+    console.log(howdy[i]);
 }
 
-console.log(challenge4)
-
+console.log('---')
 console.log('Challenge #5');
 
 // For the string, 'And getting better every day.', starting with the second
 // character, print out every third character.
 
-let getting = 'And getting better every day.';
-let counter = 1;
+let str = 'And getting better every day.';
 
-while (counter < getting.length) {
-    console.log(getting[counter]);
-    counter = counter + 3;
+for(let i = 1; i < str.length; i+=3) {
+    console.log(str[i]);
 }
 
-
+console.log('---')
 console.log('Challenge #6');
 
-// For the string 'Am I the best?', console out the letters individually, AND
-// UPPERCASED.
+// // For the string 'Am I the best?', console out the letters individually, AND
+// // UPPERCASED.
 
-let best = 'Am I the best?';
-let counter = 0;
+let str = 'Am I the best?';
+console.log(str.length)
 
-while (counter < best.length) {
-
-    console.log(best[counter].toUpperCase());
-    counter = counter + 1;
+for(let i = 0; i < str.length; i++) {
+    let newStr = str.toUpperCase();
+    console.log(newStr)
 }
 
 
+
+console.log('---')
 console.log('Challenge #7');
 
 // For the string 'Whoa, I am the best!', console out the letters individually,
 // but also capitalize the letters in the third word.
 
-const better = "Woah, I am the best!";
-let counter = 0;
-let space = 0;
+let str = "Woah, I am the best!";
 
-while (counter < better.length) {
-
-    if (better[counter] === " ") {
-        space = space + 1;
-    } if (space === 2) {
-        console.log(better[counter].toUpperCase());
-    } else {
-        console.log(better[counter]);
-    }
-    counter = counter + 1;
+for(let i = 0; i < str.length; i++) {
+    let newStr = str.replace('am', 'AM')
+    console.log(newStr[i])
 }
 
+console.log('---')
 console.log('Challenge #8');
-
 
 // For the string 'I am become death, destroyer of worlds.', console out the letters
 //  individually, but backwards. That is, the first console log should be
 // `.`, followed by `s`, followed by `d`, and so on.
 
-const death = 'I am become death, destroyer of worlds.';
-let counter = death.length;
+let str = 'I am become death, destroyer of worlds.';
 
-while (counter >= 0) {
-    console.log(death[counter]);
-    counter = counter - 1;
+for(let i = 0; i <= str.length; i++) {
+    let newStr = str.split('').reverse().join('');
+    console.log(newStr[i]);
 }
 
+console.log('---')
+console.log('Challenge #9');
+// stolen from : https://stackoverflow.com/questions/29593532/how-to-globally-replace-pipe-symbol-in-string // "so|me|str|ing".replace(/\|/g, ',');
+
+// // Console out the individual letters of each person in class today, which are
+// // in the string above. Every time you start a new name (including the first
+// // one!), console out the string: 'Here today is:'.
+// // You'll know you're at a new person's name when you hit the pipe character.
+// // Don't print the pipes!
+
 const names = 'Colin|Mesuara|Drew|In Seop|Emma|Ben|J|Ryan|Olgy|Mike|Chris|John';
 
-// Console out the individual letters of each person in class today, which are
-// in the string above. Every time you start a new name (including the first
-// one!), console out the string: 'Here today is:'.
-
-// You'll know you're at a new person's name when you hit the pipe character.
-
-// Don't print the pipes!
-
-const names = 'Colin|Mesuara|Drew|In Seop|Emma|Ben|J|Ryan|Olgy|Mike|Chris|John';
-const str = 'Here today is:';
-let counter = 0;
-let hereToday = 'Here today is:';
-let replace = hereToday.replace("|", " ")
-
-while (counter < names.length) {
-    if (counter === 0) {
-        console.log(hereToday)
-    }
-    if (names[counter] === "|") {
-        console.log(hereToday)
+for (let i = 0; i < names.length; i++) {
+    if (names[i] === "|") {
+        console.log('Here today is: ')
     } else {
-        console.log(names[counter])
+        console.log(names[i])
     }
-    counter = counter + 1;
 }
+
+// // // let newNames = names.replace('|', ',');
+// // let newNames1 = names.replace(/|/g, '');
+// // // console.log(newNames);
+// // console.log(newNames1);
+
+
+
+
+// for (let i = 0; i < names.length; i++) {
+//     let newNames = names.replace(/\|/g, ',');
+//     console.log(newNames[i]);
+// }
+
+// for (let i = 0; i < names.length; i++) {
+//     if(names.length[i] === '|') {
+//         console.log(names[i]);
+//     }
+// }
+
+
+//Colins Solution... didnt include the message 'Here today is:' before the start of 'Colin'
+// i = 0;
+// while (i < names.length) {
+//     if (names[i] === '|') {
+//         console.log('Here today is:');
+//     } else {
+//         console.log(names[i])
+//     }
+
+//     i = i + 1;
+// }
